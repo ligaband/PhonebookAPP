@@ -10,7 +10,7 @@ public class PhonebookRepository {
     DBHandler dbHandler = new DBHandler();
 
     public void createTableContacts() throws SQLException {
-        String query = "CREATE TABLE contacts (id int primary key not null auto_increment, name VARCHAR (255) not null, surname VARCHAR (255) not null, phone_number VARCHAR (255), email VARCHAR (255))";
+        String query = "CREATE TABLE IF NOT EXISTS contacts (id int primary key not null auto_increment, name VARCHAR (255) not null, surname VARCHAR (255) not null, phone_number VARCHAR (255), email VARCHAR (255))";
         PreparedStatement preparedStatement = dbHandler.getConnection().prepareStatement(query);
         preparedStatement.execute();
         preparedStatement.close();
