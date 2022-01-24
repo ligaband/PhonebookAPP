@@ -83,6 +83,7 @@ public class Controller {
         }
         Contact contact = new Contact(name, surname, phoneNumber, email);
         phonebookController.addContact(contact);
+        viewAllContacts();
 
 
         textFieldEmail.clear();
@@ -126,6 +127,7 @@ public class Controller {
         phonebookController.removeContact(contact);
         textFieldNameDelete.clear();
         textFieldSurnameDelete.clear();
+        viewAllContacts();
 
     }
 
