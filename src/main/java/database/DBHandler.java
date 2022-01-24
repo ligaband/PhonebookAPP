@@ -8,8 +8,8 @@ public class DBHandler {
 
 
     String connectionUrl = "jdbc:mysql://localhost:3306/phonebook_javafx";
-    String user = "root";
-    String pass = "Nikolaba-7";
+    String user = "";
+    String pass = "";
 
     private static Connection connection;
     public DBHandler(){
